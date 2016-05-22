@@ -18,11 +18,12 @@ public class Calculator {
         if (args.length!=0) rw.setPath(args[0]);
         start();
     }
-/**
-* Метод, определяющий способ ввода данных (на основе файла или через консоль).
-* Выполняет необходимую последовательность действий для обоих случаев.
-* Отлавливает возможные исключения.
-*/
+
+    /**
+    * Метод, определяющий способ ввода данных (на основе файла или через консоль).
+    * Выполняет необходимую последовательность действий для обоих случаев.
+    * Отлавливает возможные исключения.
+    */
     protected static void start(){
         if (!rw.getPath().equals("")){
             try {
@@ -66,11 +67,11 @@ public class Calculator {
         }
     }
 
-/**
- * Метод для создания операндов (на основе данных парсинга),
- * и получения результата операции.
- * @return Возвращает результат вычислений в виде дроби (Fraction).
- */
+    /**
+     * Метод для создания операндов (на основе данных парсинга),
+     * и получения результата операции.
+     * @return Возвращает результат вычислений в виде дроби (Fraction).
+     */
     protected static Fraction makeCalculation() throws ArithmeticException{
         operandOne = new Fraction(parser.getNumeratorOne(),parser.getDenominatorOne());
         operandTwo = new Fraction(parser.getNumeratorTwo(),parser.getDenominatorTwo());
