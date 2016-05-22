@@ -1,5 +1,7 @@
 /**
- * Created by Яковенко Михаил
+ * Класс для представления простой дроби.
+ * Реализует арифметические операции над дробями (умножение, деление, сложение, вычитание)
+ * @author  Yakovenko M.
  */
 public class Fraction {
     private int numerator;       // числитель
@@ -10,6 +12,11 @@ public class Fraction {
         this.denominator = denominator;
     }
 
+    /**
+    * Метод, реализующий умножение.
+    * @param operand - второй операнд
+    * @return Возвращает произведение
+    */
     protected Fraction multiplication(Fraction operand){
         Fraction result = new Fraction(0,0);
         result.numerator = this.numerator * operand.numerator;
@@ -17,6 +24,12 @@ public class Fraction {
         return result;
     }
 
+    /**
+    * Метод, реализующий деление.
+    * @param operand - второй операнд
+    * @return - возвращает частное
+    * @exception ArithmeticException - деление на 0
+    */
     protected Fraction division(Fraction operand) throws ArithmeticException{
         Fraction result = new Fraction(0,0);
         if (operand.numerator==0){
@@ -27,6 +40,11 @@ public class Fraction {
         return result;
     }
 
+    /**
+     * Метод, реализующий разность.
+     * @param operand - второй операнд
+     * @return - возвращает разность
+     */
     protected Fraction subtraction(Fraction operand){
         Fraction result = new Fraction(0,0);
         result.denominator = lcm (this.denominator,operand.denominator);
@@ -34,6 +52,11 @@ public class Fraction {
         return result;
     }
 
+    /**
+     * Метод, реализующий деление.
+     * @param operand - второй операнд
+     * @return - возвращает частное
+     */
     protected Fraction addition(Fraction operand){
         Fraction result = new Fraction(0,0);
         result.denominator = lcm (this.denominator,operand.denominator);
@@ -41,7 +64,12 @@ public class Fraction {
         return result;
     }
 
-    // наибольший общий делить
+    /**
+     * Метод, реализующий поиск наибольшего общего делителя(НОД) для двух чисел.
+     * @param  a - первое число
+     * @param b - второе число
+     * @return - возвращает НОД
+     */
     protected int gcd(int a,int b) {
         while (b != 0) {
             int tmp = a % b;
@@ -51,7 +79,12 @@ public class Fraction {
         return a;
     }
 
-    // наименьшее общее кратное
+    /**
+     * Метод, реализующий поиск наименьшего общего кратного(НОК) для двух чисел.
+     * @param a - первое число
+     * @param b - второе число
+     * @return - возвращает НОК
+     */
     protected int lcm(int a, int b){
         return a / gcd(a,b) * b;
     }

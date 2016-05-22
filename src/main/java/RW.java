@@ -3,15 +3,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Яковенко Михаил
+ * Класс для операций считывания входных данных и записи результатов вычислений.
+ * @author  Yakovenko M.
  */
-
 public class RW {
-
     private String example;             // входное выражение (из консоли)
     private List<String> examples;      // входные выражения (из файла)
     private String path = "";           // путь к файлу (чтение)
 
+    /**
+     * Метод, реализующий чтение данных из файла.
+     * @exception IOException - при ошибки чтения
+     */
     protected void readFile() throws IOException {
         String line;
         examples = new ArrayList<>();
@@ -21,6 +24,9 @@ public class RW {
         }
     }
 
+    /**
+     * Метод, реализующий запись вычислений в файл.
+     */
     protected void writeFile(String str){
         try {
             FileWriter writer = new FileWriter(path.substring(0,path.length()-4)+"SOLUTIONS.xml",true);
@@ -31,6 +37,9 @@ public class RW {
         }
     }
 
+    /**
+     * Метод, реализующий чтений входных данных из консоли.
+     */
     protected void readConsole(){
         BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
         try {

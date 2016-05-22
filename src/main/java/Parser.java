@@ -1,14 +1,19 @@
 /**
- * Created by Яковенко Михаил
+ * Класс для парсинга входных данных.
+ * @author  Yakovenko M.
  */
-
 public class Parser {
-    private int numeratorOne;
-    private int denominatorOne;
-    private int numeratorTwo;
-    private int denominatorTwo;
-    private String sign;
+    private int numeratorOne;       //числитель первой дроби
+    private int denominatorOne;     //знаменатель первой дроби
+    private int numeratorTwo;       //числитель второй дроби
+    private int denominatorTwo;     //знаменатель второй дроби
+    private String sign;            //знак операции
 
+    /**
+     * Метод, реализующий парсинг и проверку на корректность входных данных.
+     * @param example - строка (из файла или консоли) в которой ожидается выражение вида 1/2 + 3/4
+     * @exception Exception- если данные неправильного формата
+     */
     protected void  parsingExampleAndCheck(String example) throws Exception {
         String [] splitExample = example.split("\\D+");
         String exampleWithoutSpaces = example.replace(" ","");
