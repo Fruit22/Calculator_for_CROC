@@ -2,3 +2,4 @@
 CalculatorCROC.iml
 target
 src/META-INF
+*.MF
