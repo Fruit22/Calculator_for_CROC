@@ -2,7 +2,8 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Created by Яковенко Михаил
+ * Класс для тестирования арифметических операций реализованных в класе Fraction.
+ * @author  Yakovenko M.
  */
 
 public class FractionTest {
