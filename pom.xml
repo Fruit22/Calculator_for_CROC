@@ -23,7 +23,7 @@
             <artifactId>maven-jar-plugin</artifactId>
             <version>2.3.1</version>
             <configuration>
-                <finalName>Croculator</finalName>
+                <finalName>Calculator</finalName>
                 <archive>
                     <manifest>
                         <mainClass>Calculator</mainClass>
