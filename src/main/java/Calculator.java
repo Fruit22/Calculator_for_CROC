@@ -4,7 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Created by Яковенко Михаил2
+ * Created by Яковенко Михаил
  */
 
 public class Calculator {
